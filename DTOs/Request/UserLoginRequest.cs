@@ -1,6 +1,6 @@
-﻿namespace IdentityService.Models
+﻿namespace IdentityService.DTOs.Request
 {
-    public class RegisterationRequest
+    public class UserLoginRequest
     {
         public string Email { get; set; } = default!;
         public string Password { get; set; } = default!;

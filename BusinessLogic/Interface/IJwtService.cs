@@ -1,4 +1,4 @@
-﻿using IdentityService.Models;
+﻿using IdentityService.DTOs.Request;
 
 namespace IdentityService.BusinessLogic.Interface
 {
@@ -6,6 +6,6 @@ namespace IdentityService.BusinessLogic.Interface
     {
         Task<string> GenerateTokenAsync(UserLoginRequest request);
 
-        Task<bool> RegisterUserAsync(RegisterationRequest request);
+        Task<bool> RegisterUserAsync(RegistrationRequest request);
     }
 }
