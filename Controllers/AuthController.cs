@@ -1,6 +1,6 @@
 ﻿using IdentityService.BusinessLogic.Interface;
 using IdentityService.Data;
-using IdentityService.Models;
+using IdentityService.DTOs.Request;
 using IdentityService.Models.Response;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +18,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(RegisterationRequest request)
+    public async Task<IActionResult> Register(RegistrationRequest request)
     {
         var isUserRegistered = await _IJwtService.RegisterUserAsync(request);
         if (isUserRegistered)
